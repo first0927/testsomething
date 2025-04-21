@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Column Video Backgrounds</title>
+  <style>
+    /* 设置页面容器 */
+    .video-row {
+      display: flex;
+      justify-content: space-between; /* 让视频均匀分布 */
+      width: 100%;
+      gap: 10px; /* 视频之间的间距 */
+    }
+
+    /* 每个视频容器 */
+    .video-container {
+      flex: 1; /* 每个视频容器占据等宽的列 */
+      overflow: hidden;
+    }
+
+    /* 视频样式 */
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* 保证视频比例正确且覆盖容器 */
+    }
+
+    /* 页面内容样式 */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* 使内容居中 */
+      color: white;
+      text-align: center;
+      font-size: 36px;
+      padding: 20px;
+      z-index: 1; /* 确保内容显示在视频上方 */
+    }
+    .image-container {
+  width: 100%;
+  height: 300px; /* 根据需要调整高度 */
+  background-size: cover; /* 使背景图片填充容器 */
+  background-position: center; /* 使图片居中 */
+}
+  </style>
+</head>
+<body>
+  <!-- 三个视频容器 -->
+  <h2>视频区域</h2>
+  <div class="video-row">
+    <!-- 第一个视频 -->
+    <div class="video-container">
+      <video autoplay muted loop preload="auto">
+        <source src="1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- 第二个视频 -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- 第三个视频 -->
+    <div class="video-container">
+      <video autoplay muted loop>
+        <source src="3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <!-- 页面内容 -->
+  <!-- <div class="content">
+    <h1>Welcome to My Website</h1>
+    <p>This is a webpage with 3 video backgrounds in a row!</p>
+  </div> -->
+  <h2>图片区域</h2>
+  <div class="video-row">
+    <!-- 第一个背景图片 -->
+    <div class="image-container" style="background-image: url('图片1.png');">
+      <!-- 可以在这里添加其他内容，比如标题或按钮 -->
+    </div>
+  
+    <!-- 第二个背景图片 -->
+    <div class="image-container" style="background-image: url('图片2.png');">
+      <!-- 可以在这里添加其他内容，比如标题或按钮 -->
+    </div>
+  
+    <!-- 第三个背景图片 -->
+    <div class="image-container" style="background-image: url('图片3.png');">
+      <!-- 可以在这里添加其他内容，比如标题或按钮 -->
+    </div>
+  </div>
+  <script>
+    alert('1')
+    //当资源加载完成
+    window.addEventListener('load', function() {
+      const p = document.querySelector('.video-container');
+    const p2 = document.querySelector('.image-container');
+    p.addEventListener('click', function() {
+      // 替换为你的 WhatsApp 号码和消息
+      const phoneNumber = '+8613311540739'; // 目标手机号（国际格式）
+      const message = encodeURIComponent('Hello, I want to chat with you!'); // 要发送的消息
+
+      // 构造 WhatsApp 链接
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+      // 跳转到 WhatsApp 聊天
+      window.location.href = whatsappURL;
+    });
+    p2.addEventListener('click', function() {
+      // 替换为你的 WhatsApp 号码和消息
+      const phoneNumber = '+8618911248219'; // 目标手机号（国际格式）
+      const message = encodeURIComponent('Hello, I want to chat with you!'); // 要发送的消息
+
+      // 构造 WhatsApp 链接
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+      // 跳转到 WhatsApp 聊天
+      window.location.href = whatsappURL;
+    });
+    });
+  </script>
+</body>
+</html>
